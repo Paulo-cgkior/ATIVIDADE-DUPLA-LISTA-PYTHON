@@ -16,4 +16,5 @@ for i, num in enumerate(num_vet, start=1):
 print("")
 
 for i,num in enumerate(reversed(num_vet)):
+    i = 1
     print(f"{i - 1}º número: {num}")
