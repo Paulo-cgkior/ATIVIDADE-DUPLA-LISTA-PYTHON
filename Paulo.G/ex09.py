@@ -1,30 +1,22 @@
 import os
 os.system("cls")
 
-num = 0
-num_vet = []
-impar_vet = []
-par_vet = []
-impar_um = []
-par_zero = []
+vetor_antes = []
 
+print("Digite 6 números inteiros:")
 for i in range(6):
-    num = int(input(f"Digite seu {i+1}º numero: "))
-    if num % 2 == 1:
-        par_vet.append(num)
-        par_zero.append(num)
+    num = int(input(f"Número {i + 1}: "))
+    vetor_antes.append(num)
+
+vetor_depois = []
+for num in vetor_antes:
+    if num % 2 == 0:
+        vetor_depois.append(0)
     else:
-        impar_vet.append(num)
-        impar_um.append(num)
-    num_vet.append(num)
+        vetor_depois.append(1)
 
+os.system("cls")
 
-print(f"Vetor: {num_vet}")
-print(f"Vetor: {impar_vet}")
-print(f"Vetor: {par_vet}")
-
-impar_um = 1
-par_zero = 0
-print(f"Vetor: {num_vet}")
-print(f"Vetor: {impar_um}")
-print(f"Vetor: {par_zero}")
+print("\n--- Resultados ---")
+print(f"Vetor antes:  {vetor_antes}")
+print(f"Vetor depois: {vetor_depois}")
